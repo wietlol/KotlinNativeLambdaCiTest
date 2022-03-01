@@ -11,7 +11,7 @@ jobs:
           command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: setup
-          command: 'sudo add-apt-repository ppa:ubuntu-toolchain-r/test; sudo apt-get update; sudo apt-get install gcc-5.1 g++-5.1; sudo apt-get upgrade libstdc++6; sudo apt-get dist-upgrade; strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
+          command: 'sudo add-apt-repository ppa:ubuntu-toolchain-r/test; sudo apt-get update; sudo apt-get install g++-5; sudo apt-get upgrade libstdc++6; sudo apt-get dist-upgrade; strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: validate setup
           command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
