@@ -23,9 +23,9 @@ jobs:
 #      - run:
 #          name: s2v
 #          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
-#      - run:
-#          name: s3
-#          command: 'sudo apt-get install g++-5'
+      - run:
+          name: s3
+          command: 'sudo apt-get install g++-5'
       - run:
           name: s3v
           command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
