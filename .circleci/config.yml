@@ -11,9 +11,9 @@ jobs:
 #      - run:
 #          name: validate startup
 #          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
-#      - run:
-#          name: s1
-#          command: 'sudo add-apt-repository ppa:ubuntu-toolchain-r/test'
+      - run:
+          name: s1
+          command: 'sudo add-apt-repository ppa:ubuntu-toolchain-r/test'
 #      - run:
 #          name: s1v
 #          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
