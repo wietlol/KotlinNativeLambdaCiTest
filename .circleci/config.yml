@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    working_directory: ~/code
+    steps:
+      - checkout
+      - run:
+          name: build
+          command: 'gradlew assemble'
+      - run:
+          name: deploy
+          command: 'sls deploy' # todo install sls
