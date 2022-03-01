@@ -8,7 +8,7 @@ jobs:
           path: ~/code
       - run:
           name: build
-          command: 'cd ~/code; ./gradlew assemble'
+          command: 'cd ~/code; chmod 775 gradlew; ./gradlew assemble'
       - run:
           name: deploy
           command: 'sls deploy' # todo install sls
