@@ -3,6 +3,8 @@ jobs:
   build:
     machine: true
     working_directory: ~/code
+    environment:
+      JVM_OPTS: -Xmx8196m
     steps:
       - checkout:
           path: ~/code
