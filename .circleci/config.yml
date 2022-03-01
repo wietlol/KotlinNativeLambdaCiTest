@@ -8,39 +8,39 @@ jobs:
     steps:
       - checkout:
           path: ~/code
-      - run:
-          name: validate startup
-          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
+#      - run:
+#          name: validate startup
+#          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: s1
           command: 'sudo add-apt-repository ppa:ubuntu-toolchain-r/test'
-      - run:
-          name: s1v
-          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
+#      - run:
+#          name: s1v
+#          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: s2
           command: 'sudo apt-get update'
-      - run:
-          name: s2v
-          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
+#      - run:
+#          name: s2v
+#          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: s3
           command: 'sudo apt-get install g++-5'
       - run:
           name: s3v
           command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
-      - run:
-          name: s4
-          command: 'sudo apt-get upgrade libstdc++6'
-      - run:
-          name: s4v
-          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
-      - run:
-          name: s5
-          command: 'sudo apt-get dist-upgrade'
-      - run:
-          name: s5v
-          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
+#      - run:
+#          name: s4
+#          command: 'sudo apt-get upgrade libstdc++6'
+#      - run:
+#          name: s4v
+#          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
+#      - run:
+#          name: s5
+#          command: 'sudo apt-get dist-upgrade'
+#      - run:
+#          name: s5v
+#          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: build
           command: 'cd ~/code; chmod 775 gradlew; ./gradlew assemble'
