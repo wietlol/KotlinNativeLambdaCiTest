@@ -43,7 +43,7 @@ jobs:
 #          command: 'strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX'
       - run:
           name: build
-          command: 'cd ~/code; chmod 775 gradlew; ./gradlew assemble'
+          command: 'cd ~/code; chmod 775 gradlew; ./gradlew assemble --no-daemon'
       - run:
           name: deploy
           command: 'sls deploy' # todo install sls
